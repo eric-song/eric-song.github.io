@@ -1,58 +1,13 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dolphin 's website by eric-song</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+---
+layout: default
+title: Your New Jekyll Site
+---
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/eric-song">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Dolphin 's website</h1>
-          <p>Object-C Cocoa 移动互联网应用</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/eric-song">eric-song</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h3>
-<a name="%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9%E6%AD%A3%E5%9C%A8%E5%BB%BA%E8%AE%BE%E4%B8%AD" class="anchor" href="#%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9%E6%AD%A3%E5%9C%A8%E5%BB%BA%E8%AE%BE%E4%B8%AD"><span class="octicon octicon-link"></span></a>网站内容正在建设中</h3>
-
-<p>这个页面是使用GitHub的自动页面生成向导生成的，使用Markdown语法。</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<h3>
-<a name="%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8jekyll%E6%9D%A5%E7%94%9F%E6%88%90%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9" class="anchor" href="#%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8jekyll%E6%9D%A5%E7%94%9F%E6%88%90%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9"><span class="octicon octicon-link"></span></a>怎么使用Jekyll来生成网站内容</h3>
-
-<p><a href="http://jekyllrb.com/docs/home/">http://jekyllrb.com/docs/home/</a></p>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
-</html>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
